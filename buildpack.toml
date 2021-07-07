@@ -30,7 +30,7 @@ sha256  = "32aeef60d9dfd0ea83cdb221c65a8e68e774e6c9255b7d9b7080f5ebaa2d535a"
 stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
-  type = "GPL-2.0-or-later"
+  type = "Apache-2.0"
   uri  = "https://github.com/watchexec/watchexec/blob/main/LICENSE"
 
 [metdata]
