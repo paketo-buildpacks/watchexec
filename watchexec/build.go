@@ -1,4 +1,3 @@
-
 /*
  * Copyright 2018-2020 the original author or authors.
  *
@@ -18,11 +17,11 @@
 package watchexec
 
 import (
-"fmt"
+	"fmt"
 
-"github.com/buildpacks/libcnb"
-"github.com/paketo-buildpacks/libpak"
-"github.com/paketo-buildpacks/libpak/bard"
+	"github.com/buildpacks/libcnb"
+	"github.com/paketo-buildpacks/libpak"
+	"github.com/paketo-buildpacks/libpak/bard"
 )
 
 type Build struct {

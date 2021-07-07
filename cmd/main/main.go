@@ -1,4 +1,3 @@
-
 /*
  * Copyright 2018-2021 the original author or authors.
  *
@@ -20,8 +19,8 @@ package main
 import (
 	"github.com/paketo-buildpacks/libpak"
 	"github.com/paketo-buildpacks/libpak/bard"
+	"github.com/paketo-buildpacks/watchexec/watchexec"
 	"os"
-	"watchexec/watchexec"
 )
 
 func main() {

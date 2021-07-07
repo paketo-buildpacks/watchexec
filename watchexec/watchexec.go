@@ -33,7 +33,6 @@ type Watchexec struct {
 }
 
 func NewWatchexec(dependency libpak.BuildpackDependency, cache libpak.DependencyCache) (Watchexec, libcnb.BOMEntry) {
-
 	contributor, entry := libpak.NewDependencyLayer(dependency, cache, libcnb.LayerTypes{
 		Launch: true,
 	})
