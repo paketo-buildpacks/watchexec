@@ -1,4 +1,4 @@
-module "watchexec"
+module "github.com/paketo-buildpacks/watchexec"
 
 go 1.16
 
