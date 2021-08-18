@@ -29,7 +29,7 @@ id = "io.buildpacks.stacks.bionic"
 id = "io.paketo.stacks.tiny"
 
 [[stacks]]
-id = "org.cloudfoundry.stacks.cflinuxfs3"
+id = "*"
 
 [[buildpack.licenses]]
 type = "Apache-2.0"
@@ -41,7 +41,7 @@ name    = "Watchexec - execute commands when watched files change"
 version = "1.15.3"
 uri     = "https://github.com/watchexec/watchexec/releases/download/1.15.3/watchexec-1.15.3-x86_64-unknown-linux-gnu.tar.xz"
 sha256  = "32aeef60d9dfd0ea83cdb221c65a8e68e774e6c9255b7d9b7080f5ebaa2d535a"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "org.cloudfoundry.stacks.cflinuxfs3" ]
+stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
 
   [[metadata.dependencies.licenses]]
   type = "Apache-2.0"
