@@ -47,7 +47,7 @@ stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
   type = "Apache-2.0"
   uri  = "https://github.com/watchexec/watchexec/blob/main/LICENSE"
 
-[metdata]
+[metadata]
 pre-package   = "scripts/build.sh"
 include-files = [
     "LICENSE",
