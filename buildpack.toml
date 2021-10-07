@@ -15,46 +15,38 @@
 api = "0.6"
 
 [buildpack]
-id = "paketo-buildpacks/watchexec"
-name = "Paketo Watchexec Buildpack"
-version = "{{.version}}"
-homepage = "https://github.com/paketo-buildpacks/watchexec"
-description = "A Cloud Native Buildpack that provides the Watchexec binary tool"
-keywords = ["watchexec", "reloadable", "processes"]
+  description = "A Cloud Native Buildpack that provides the Watchexec binary tool"
+  homepage = "https://github.com/paketo-buildpacks/watchexec"
+  id = "paketo-buildpacks/watchexec"
+  keywords = ["watchexec", "reloadable", "processes"]
+  name = "Paketo Watchexec Buildpack"
+  version = "{{.version}}"
 
-[[stacks]]
-id = "io.buildpacks.stacks.bionic"
-
-[[stacks]]
-id = "io.paketo.stacks.tiny"
-
-[[stacks]]
-id = "*"
-
-[[buildpack.licenses]]
-type = "Apache-2.0"
-uri  = "https://github.com/paketo-buildpacks/watchexec/blob/main/LICENSE"
-
-[[metadata.dependencies]]
-id      = "watchexec"
-name    = "Watchexec - execute commands when watched files change"
-version = "1.17.1"
-uri     = "https://github.com/watchexec/watchexec/releases/download/cli-v1.17.1/watchexec-1.17.1-x86_64-unknown-linux-gnu.tar.xz"
-sha256  = "8c6e2d9ee7b7d1ceb54c1ae74cd5dd21429f2e4c77165f916560bcc146f85844"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "Apache-2.0"
-  uri  = "https://github.com/watchexec/watchexec/blob/main/LICENSE"
+  [[buildpack.licenses]]
+    type = "Apache-2.0"
+    uri = "https://github.com/paketo-buildpacks/watchexec/blob/main/LICENSE"
 
 [metadata]
-pre-package   = "scripts/build.sh"
-include-files = [
-    "LICENSE",
-    "NOTICE",
-    "README.md",
-    "bin/build",
-    "bin/detect",
-    "bin/main",
-    "buildpack.toml",
-  ]
+  include-files = ["LICENSE", "NOTICE", "README.md", "bin/build", "bin/detect", "bin/main", "buildpack.toml"]
+  pre-package = "scripts/build.sh"
+
+  [[metadata.dependencies]]
+    id = "watchexec"
+    name = "Watchexec - execute commands when watched files change"
+    sha256 = "8c6e2d9ee7b7d1ceb54c1ae74cd5dd21429f2e4c77165f916560bcc146f85844"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://github.com/watchexec/watchexec/releases/download/cli-v1.17.1/watchexec-1.17.1-x86_64-unknown-linux-gnu.tar.xz"
+    version = "1.17.1"
+
+    [[metadata.dependencies.licenses]]
+      type = "Apache-2.0"
+      uri = "https://github.com/watchexec/watchexec/blob/main/LICENSE"
+
+[[stacks]]
+  id = "io.buildpacks.stacks.bionic"
+
+[[stacks]]
+  id = "io.paketo.stacks.tiny"
+
+[[stacks]]
+  id = "*"
