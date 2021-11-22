@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-api = "0.6"
+api = "0.7"
 
 [buildpack]
   description = "A Cloud Native Buildpack that provides the Watchexec binary tool"
@@ -21,6 +21,7 @@ api = "0.6"
   keywords = ["watchexec", "reloadable", "processes"]
   name = "Paketo Watchexec Buildpack"
   version = "{{.version}}"
+  sbom-formats = ["application/vnd.syft+json", "application/vnd.cyclonedx+json"]
 
   [[buildpack.licenses]]
     type = "Apache-2.0"
@@ -37,6 +38,10 @@ api = "0.6"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://github.com/watchexec/watchexec/releases/download/cli-v1.17.1/watchexec-1.17.1-x86_64-unknown-linux-gnu.tar.xz"
     version = "1.17.1"
+    purl = "pkg:generic/watchexec@1.17.1?arch=amd64"
+    cpes = [
+      "cpe:2.3:a:watchexec:watchexec:1.17.1:*:*:*:*:*:*:*"
+    ]
 
     [[metadata.dependencies.licenses]]
       type = "Apache-2.0"
