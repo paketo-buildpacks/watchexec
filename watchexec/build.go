@@ -56,7 +56,9 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 		watch, be := NewWatchexec(watchExecDependency, dc)
 
 		result.Layers = append(result.Layers, watch)
-		result.BOM.Entries = append(result.BOM.Entries, be)
+		if be.Name != "" {
+			result.BOM.Entries = append(result.BOM.Entries, be)
+		}
 	}
 
 	return result, nil
