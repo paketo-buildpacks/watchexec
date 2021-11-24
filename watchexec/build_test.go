@@ -57,7 +57,9 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		Expect(os.RemoveAll(ctx.Application.Path)).To(Succeed())
 	})
 
-	it("contributes Watchexec", func() {
+	it("contributes Watchexec for API <= 0.6", func() {
+		ctx.Buildpack.API = "0.6"
+
 		result, err := build.Build(ctx)
 		Expect(err).NotTo(HaveOccurred())
 
@@ -66,5 +68,25 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 
 		Expect(result.BOM.Entries).To(HaveLen(1))
 		Expect(result.BOM.Entries[0].Name).To(Equal("watchexec"))
+	})
+	it("contributes Watchexec for API 0.7+", func() {
+		ctx.Buildpack.Metadata = map[string]interface{}{
+			"dependencies": []map[string]interface{}{
+				{
+					"id":      "watchexec",
+					"version": "1.15.3",
+					"stacks":  []interface{}{"test-stack-id"},
+					"cpes":    []string{"cpe:2.3:a:watchexec:watchexec:1.17.1:*:*:*:*:*:*:*"},
+					"purl":    "pkg:generic/watchexec@1.17.1?arch=amd64",
+				},
+			},
+		}
+		result, err := build.Build(ctx)
+		Expect(err).NotTo(HaveOccurred())
+
+		Expect(result.Layers).To(HaveLen(1))
+		Expect(result.Layers[0].Name()).To(Equal("watchexec"))
+
+		Expect(result.BOM.Entries).To(HaveLen(0))
 	})
 }
