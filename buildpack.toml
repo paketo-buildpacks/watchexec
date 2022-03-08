@@ -32,14 +32,14 @@ api = "0.7"
   pre-package = "scripts/build.sh"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:watchexec:watchexec:1.18.6:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:watchexec:watchexec:1.18.7:*:*:*:*:*:*:*"]
     id = "watchexec"
     name = "Watchexec - execute commands when watched files change"
-    purl = "pkg:generic/watchexec@1.18.6?arch=amd64"
-    sha256 = "b91d929a114dfc67e6293a4f9bff43d5780d2720fa3ae97cf01af818c8c275d7"
+    purl = "pkg:generic/watchexec@1.18.7?arch=amd64"
+    sha256 = "1928c977bb7cacfa123c9064b53035c204b2fb41be7d84b29b7d15c5d50bccf1"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/watchexec/watchexec/releases/download/cli-v1.18.6/watchexec-1.18.6-x86_64-unknown-linux-gnu.tar.xz"
-    version = "1.18.6"
+    uri = "https://github.com/watchexec/watchexec/releases/download/cli-v1.18.7/watchexec-1.18.7-x86_64-unknown-linux-gnu.tar.xz"
+    version = "1.18.7"
 
     [[metadata.dependencies.licenses]]
       type = "Apache-2.0"
