@@ -21,7 +21,7 @@ dependencies:
   id:              watchexec
   uses:            docker://ghcr.io/paketo-buildpacks/actions/github-release-dependency:main
   with:
-    glob:       watchexec-.+-x86_64-unknown-linux-gnu.tar.xz
+    glob:       watchexec-.+-x86_64-unknown-linux-musl.tar.xz
     owner:      watchexec
     repository: watchexec
     tag_filter: cli-v(1.*)
