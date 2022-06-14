@@ -17,7 +17,6 @@
 package watchexec
 
 import (
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"testing"
@@ -39,7 +38,7 @@ func testWatchexec(t *testing.T, context spec.G, it spec.S) {
 	it.Before(func() {
 		var err error
 
-		ctx.Layers.Path, err = ioutil.TempDir("", "watchexec-layers")
+		ctx.Layers.Path, err = os.MkdirTemp("", "watchexec-layers")
 		Expect(err).NotTo(HaveOccurred())
 	})
 
