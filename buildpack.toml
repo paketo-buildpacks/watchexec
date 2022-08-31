@@ -19,7 +19,7 @@ api = "0.7"
   homepage = "https://github.com/paketo-buildpacks/watchexec"
   id = "paketo-buildpacks/watchexec"
   keywords = ["watchexec", "reloadable", "processes"]
-  name = "Paketo Watchexec Buildpack"
+  name = "Paketo Buildpack for Watchexec"
   sbom-formats = ["application/vnd.syft+json", "application/vnd.cyclonedx+json"]
   version = "{{.version}}"
 
