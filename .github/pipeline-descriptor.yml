@@ -27,5 +27,14 @@ dependencies:
     glob:       watchexec-.+-x86_64-unknown-linux-musl.tar.xz
     owner:      watchexec
     repository: watchexec
-    tag_filter: cli-v(1.*)
+    tag_filter: ^v(1\.*)
+    token:      ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
+- name:            Watchexec CLI AMD64
+  id:              watchexec
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/github-release-dependency:main
+  with:
+    glob:       watchexec-.+-aarch64-unknown-linux-musl.tar.xz
+    owner:      watchexec
+    repository: watchexec
+    tag_filter: ^v(1\.*)
     token:      ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}

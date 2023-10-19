@@ -36,22 +36,32 @@ api = "0.7"
     id = "watchexec"
     name = "Watchexec"
     purl = "pkg:generic/watchexec@1.20.5?arch=amd64"
+    source = "https://github.com/watchexec/watchexec/archive/refs/tags/v1.23.0.tar.gz"
+    source-sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    stacks = ["*"]
     sha256 = "33e091870736833b77b103a8e7268c0ae66d756b8d71203405353eb9d40774f2"
-    source = "https://github.com/watchexec/watchexec/archive/refs/tags/cli-v1.20.5.tar.gz"
-    source-sha256 = "2bc04c7ecf58d34a48c3eeea54a76b7e621717cb93305497bea2f6399dd119c6"
-    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://github.com/watchexec/watchexec/releases/download/cli-v1.20.5/watchexec-1.20.5-x86_64-unknown-linux-musl.tar.xz"
-    version = "1.20.5"
+    version = "1.23.0"
 
     [[metadata.dependencies.licenses]]
       type = "Apache-2.0"
       uri = "https://github.com/watchexec/watchexec/blob/main/LICENSE"
 
-[[stacks]]
-  id = "io.buildpacks.stacks.bionic"
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:watchexec:watchexec:1.20.5:*:*:*:*:*:*:*"]
+    id = "watchexec"
+    name = "Watchexec"
+    purl = "pkg:generic/watchexec@1.20.5?arch=arm64"
+    source = "https://github.com/watchexec/watchexec/archive/refs/tags/v1.23.0.tar.gz"
+    source-sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    stacks = ["*"]
+    uri = "https://github.com/watchexec/watchexec/releases/download/v1.23.0/watchexec-1.23.0-aarch64-unknown-linux-musl.tar.xz"
+    sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    version = "1.23.0"
 
-[[stacks]]
-  id = "io.paketo.stacks.tiny"
+    [[metadata.dependencies.licenses]]
+      type = "Apache-2.0"
+      uri = "https://github.com/watchexec/watchexec/blob/main/LICENSE"
 
 [[stacks]]
   id = "*"
