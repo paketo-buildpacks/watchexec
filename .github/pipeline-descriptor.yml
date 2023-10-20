@@ -29,7 +29,7 @@ dependencies:
     repository: watchexec
     tag_filter: ^v(1\.*)
     token:      ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
-- name:            Watchexec CLI AMD64
+- name:            Watchexec CLI ARM64
   id:              watchexec
   uses:            docker://ghcr.io/paketo-buildpacks/actions/github-release-dependency:main
   with:
