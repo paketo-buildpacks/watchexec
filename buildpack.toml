@@ -37,7 +37,7 @@ api = "0.7"
     name = "Watchexec"
     purl = "pkg:generic/watchexec@1.23.0?arch=amd64"
     source = "https://github.com/watchexec/watchexec/archive/refs/tags/v1.23.0.tar.gz"
-    source-sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    source-sha256 = "2a321962669979feef44ea7a6220819d5c916ca939eba41b033ea346a44caa90"
     stacks = ["*"]
     sha256 = "9cab0c339ad5f6da34ce6ce00d27dc02e9ba3f5418f81c728b83c1b7feef051d"
     uri = "https://github.com/watchexec/watchexec/releases/download/v1.23.0/watchexec-1.23.0-x86_64-unknown-linux-musl.tar.xz"
