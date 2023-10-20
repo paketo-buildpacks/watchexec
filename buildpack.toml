@@ -56,7 +56,7 @@ api = "0.7"
     source-sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     stacks = ["*"]
     uri = "https://github.com/watchexec/watchexec/releases/download/v1.23.0/watchexec-1.23.0-aarch64-unknown-linux-musl.tar.xz"
-    sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    sha256 = "3a977fa419d7dafe07b119a9c0b3c53311b0b624a388647ce0f0e12b254f4351"
     version = "1.23.0"
 
     [[metadata.dependencies.licenses]]
