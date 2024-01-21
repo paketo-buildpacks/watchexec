@@ -1,4 +1,4 @@
-name: Update Watchexec CLI
+name: Update Watchexec CLI ARM64
 "on":
     schedule:
         - cron: 0 5 * * 1-5
@@ -44,7 +44,7 @@ jobs:
             - id: dependency
               uses: docker://ghcr.io/paketo-buildpacks/actions/github-release-dependency:main
               with:
-                glob: watchexec-.+-x86_64-unknown-linux-musl.tar.xz
+                glob: watchexec-.+-aarch64-unknown-linux-musl.tar.xz
                 owner: watchexec
                 repository: watchexec
                 tag_filter: v(1.*)
@@ -108,14 +108,14 @@ jobs:
             - uses: peter-evans/create-pull-request@v5
               with:
                 author: ${{ secrets.JAVA_GITHUB_USERNAME }} <${{ secrets.JAVA_GITHUB_USERNAME }}@users.noreply.github.com>
-                body: Bumps `Watchexec CLI` from `${{ steps.buildpack.outputs.old-version }}` to `${{ steps.buildpack.outputs.new-version }}`.
-                branch: update/buildpack/watchexec-cli
+                body: Bumps `Watchexec CLI ARM64` from `${{ steps.buildpack.outputs.old-version }}` to `${{ steps.buildpack.outputs.new-version }}`.
+                branch: update/buildpack/watchexec-cli-arm-64
                 commit-message: |-
-                    Bump Watchexec CLI from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
+                    Bump Watchexec CLI ARM64 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
 
-                    Bumps Watchexec CLI from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}.
+                    Bumps Watchexec CLI ARM64 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}.
                 delete-branch: true
                 labels: ${{ steps.buildpack.outputs.version-label }}, type:dependency-upgrade
                 signoff: true
-                title: Bump Watchexec CLI from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
+                title: Bump Watchexec CLI ARM64 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
                 token: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
