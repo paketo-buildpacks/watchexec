@@ -27,7 +27,7 @@ dependencies:
     glob:       watchexec-.+-x86_64-unknown-linux-musl.tar.xz
     owner:      watchexec
     repository: watchexec
-    tag_filter: v(1.*)
+    tag_filter: v(2.*)
     token:      ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
 
 # ARM64
@@ -38,6 +38,6 @@ dependencies:
     glob:       watchexec-.+-aarch64-unknown-linux-musl.tar.xz
     owner:      watchexec
     repository: watchexec
-    tag_filter: v(1.*)
+    tag_filter: v(2.*)
     token:      ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
     arch:    arm64
