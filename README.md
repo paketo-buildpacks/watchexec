@@ -1,4 +1,4 @@
-# `gcr.io/paketo-buildpacks/watchexec`
+# `paketo-buildpacks/watchexec`
 
 The Paketo Buildpack for Watchexec is a Cloud Native Buildpack that provides the Watchexec binary tool to support reloadable processes.
 
