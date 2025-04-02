@@ -1,4 +1,7 @@
-# `gcr.io/paketo-buildpacks/watchexec`
+# Paketo Buildpack for Watchexec
+
+## Buildpack ID: `paketo-buildpacks/watchexec`
+## Registry URLs: `docker.io/paketobuildpacks/watchexec`
 
 The Paketo Buildpack for Watchexec is a Cloud Native Buildpack that provides the Watchexec binary tool to support reloadable processes.
 
