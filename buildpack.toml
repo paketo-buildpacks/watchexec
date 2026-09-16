@@ -48,16 +48,16 @@ api = "0.7"
       uri = "https://github.com/watchexec/watchexec/blob/main/LICENSE"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:watchexec:watchexec:2.7.2:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:watchexec:watchexec:2.7.3:*:*:*:*:*:*:*"]
     id = "watchexec"
     name = "Watchexec"
-    purl = "pkg:generic/watchexec@2.7.2?arch=arm64"
-    sha256 = "83cbce2ffc85adaab14d6ded09b292f4383358ac6d9a51b4e4e083df0cb7c831"
-    source = "https://github.com/watchexec/watchexec/archive/refs/tags/v2.7.2.tar.gz"
-    source-sha256 = "ad87aac074e5d1b018bb50ef98240911cd31d96d68d9b8ac0f02c14879930f50"
+    purl = "pkg:generic/watchexec@2.7.3?arch=arm64"
+    sha256 = "80bd9acfc25e4035624d99585b2f920add5ecbdc0c732c4e42fa1451b63d80a5"
+    source = "https://github.com/watchexec/watchexec/archive/refs/tags/v2.7.3.tar.gz"
+    source-sha256 = "6f395178a963ffd478f0ee2e13146d375e8bbe4fec6859a56a0086a90e07e6f2"
     stacks = ["*"]
-    uri = "https://github.com/watchexec/watchexec/releases/download/v2.7.2/watchexec-2.7.2-aarch64-unknown-linux-musl.tar.xz"
-    version = "2.7.2"
+    uri = "https://github.com/watchexec/watchexec/releases/download/v2.7.3/watchexec-2.7.3-aarch64-unknown-linux-musl.tar.xz"
+    version = "2.7.3"
 
     [[metadata.dependencies.licenses]]
       type = "Apache-2.0"
