@@ -18,20 +18,6 @@ api = "0.7"
   pre-package = "scripts/build.sh --target linux/amd64 --target linux/arm64"
 
   [[metadata.dependencies]]
-    id = "watchexec"
-    name = "Watchexec"
-    purl = "pkg:generic/watchexec@2.7.2?arch=amd64"
-    sha256 = "a2c01f82fb4cdafca1fa12cb88e4a1145dec63364dbdf92664efbaac3bb44dd2"
-    source = "https://github.com/watchexec/watchexec/archive/refs/tags/v2.7.2.tar.gz"
-    stacks = ["*"]
-    uri = "https://github.com/watchexec/watchexec/releases/download/v2.7.2/watchexec-2.7.2-x86_64-unknown-linux-musl.tar.xz"
-    version = "2.7.2"
-
-    [[metadata.dependencies.licenses]]
-      type = "Apache-2.0"
-      uri = "https://github.com/watchexec/watchexec/blob/main/LICENSE"
-
-  [[metadata.dependencies]]
     arch = "amd64"
     checksum = "sha256:b5bcd00ae3ebb53f7ea5d499fdf98bda14711589a7ecc0619e1847586beaa24d"
     cpe = "cpe:2.3:a:watchexec:watchexec:2.7.3:*:*:*:*:*:*:*"
