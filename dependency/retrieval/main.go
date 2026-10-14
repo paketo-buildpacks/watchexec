@@ -86,6 +86,14 @@ func getAllVersions() (versionology.VersionFetcherArray, error) {
 	return versions, nil
 }
 
+// libpak reads the arch from the PURL; libdependency's GeneratePURL does not set it.
+func purlWithArch(purl string, arch string) string {
+	if base, qualifiers, found := strings.Cut(purl, "?"); found {
+		return fmt.Sprintf("%s?arch=%s&%s", base, arch, qualifiers)
+	}
+	return fmt.Sprintf("%s?arch=%s", purl, arch)
+}
+
 func generateMetadata(versionFetcher versionology.VersionFetcher) ([]versionology.Dependency, error) {
 	version, ok := versionFetcher.(watchexecVersion)
 	if !ok {
@@ -138,7 +146,8 @@ func generateMetadata(versionFetcher versionology.VersionFetcher) ([]versionolog
 			Licenses:       licenses,
 			Name:           name,
 			OS:             "linux",
-			PURL:           retrieve.GeneratePURL(id, versionString, checksum, platform.asset.BrowserDownloadURL),
+			PURL:           purlWithArch(retrieve.GeneratePURL(id, versionString, checksum, platform.asset.BrowserDownloadURL), platform.arch),
+			SHA256:         checksum,
 			Source:         source,
 			SourceChecksum: fmt.Sprintf("sha256:%s", sourceChecksum),
 			Stacks:         []string{"*"},
